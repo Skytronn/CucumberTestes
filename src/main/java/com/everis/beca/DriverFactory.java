@@ -8,7 +8,7 @@ public class DriverFactory {
     private static WebDriver driver;
 
     public void iniciarDriver(){
-    	System.setProperty("webdriver.chrome.driver", "C:\\seleniumDriver\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chrome\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
