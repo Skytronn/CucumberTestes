@@ -8,18 +8,18 @@ public class VerOfertasTestsSteps {
 
 	VerOfertasPage ofertaWebmotors = new VerOfertasPage();
 	
-	@Dado("que eu navego do webmotors")
+	@Dado("que eu navego até a página do webmotors")
 	public void navegarAtePagina(){
 		ofertaWebmotors.acessaPaginaIncial();
 	}
-	@Entao("clico no botão ver ofertas")
+	@Entao("eu clico no botão ver ofertas")
 	public void clicarVerOfertas() {
 		ofertaWebmotors.clicarBotaoVerOfertas();
 	}
 	
-//	@Entao("eu vai para pagina de ofertas")
-	//public void verificarPagina() {
-	//	ofertaWebmotors.clicarElemento(by);
+	@Entao("eu sou direcionado a página de ofertas")
+	public void verificarPagina() {
+		ofertaWebmotors.validaUrlPerfil();
 		
-	//}
+	}
 }

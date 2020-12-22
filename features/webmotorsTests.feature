@@ -10,5 +10,10 @@
 	Quando eu preencho os meus dados
 	E clico no botão criar conta
 	Entao eu estou cadastrado
-	
+		
+	@evidencia
+	Cenario: Validar botão ver ofertas
+	Dado que eu navego até a página do webmotors
+	Quando eu clico no botão ver ofertas
+	Entao eu sou direcionado a página de ofertas
 

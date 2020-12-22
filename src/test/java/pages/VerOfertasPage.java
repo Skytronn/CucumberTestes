@@ -1,5 +1,7 @@
 package pages;
 
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -31,6 +33,10 @@ public class VerOfertasPage extends CommonsBasePage{
 	public void clicarBotaoVerOfertas() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"WhiteBox\"]/div[1]/div[2]/div/div/a"))).click();
 		
+	}
+	
+	public void validaUrlPerfil() {
+		assertTrue("URL não contém ofertas", wait.until(ExpectedConditions.urlContains("ofertas")));
 	}
 
 }
