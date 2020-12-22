@@ -11,7 +11,8 @@ CadastroWebmotorsPage cadastroWebmotors = new CadastroWebmotorsPage();
 	public void navegarAteCadastro() throws InterruptedException{
 		cadastroWebmotors.acessaPaginaCadastro();
 	}
-	@Quando("eu preencho os meus dados")
+	
+	@Quando("eu preencho os meus dados de cadastro")
 	public void preenchoDados() {
 		cadastroWebmotors.preencheDadosDeCadastro("Teste Teste", "teste4352@gmail.com", "Teste12345.");
 	}

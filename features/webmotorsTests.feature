@@ -7,7 +7,7 @@
 	@evidencia
 	Cenario: Validar se o usuário faz cadastro
 	Dado que eu navego até a página de Cadastro do webmotors
-	Quando eu preencho os meus dados
+	Quando eu preencho os meus dados de cadastro
 	E clico no botão criar conta
 	Entao eu estou cadastrado
 		

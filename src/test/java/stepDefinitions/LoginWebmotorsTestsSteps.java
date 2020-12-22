@@ -12,7 +12,7 @@ LoginWebmotorsPage loginWebmotors = new LoginWebmotorsPage();
 		loginWebmotors.acessaPaginaLogin();
 	}
 	
-	@Quando("eu preencho os meus dados")
+	@Quando("eu preencho os meus dados de login")
 	public void preenchoDados() {
 		loginWebmotors.preencheDadosDeLogin("dandasaev@gmail.com", "36253202");
 	}

@@ -23,7 +23,7 @@ public class CadastroWebmotorsPage extends CommonsBasePage {
 		wait = new WebDriverWait(_Driver(), 15);
 		builder = new Actions(_Driver());
 	}
-
+	
 	public void acessaPaginaCadastro() throws InterruptedException {
 		navegarAteSite("https://login.webmotors.com.br/?&r=https://www.webmotors.com.br&inst=header:webmotors::logar-ou-cadastrar");
 		Thread.sleep(2000);
