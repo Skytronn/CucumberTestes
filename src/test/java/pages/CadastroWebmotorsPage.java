@@ -24,23 +24,22 @@ public class CadastroWebmotorsPage extends CommonsBasePage {
 		builder = new Actions(_Driver());
 	}
 
-	public void acessaPaginaCadastro() {
+	public void acessaPaginaCadastro() throws InterruptedException {
 		navegarAteSite("https://login.webmotors.com.br/?&r=https://www.webmotors.com.br&inst=header:webmotors::logar-ou-cadastrar");
+		Thread.sleep(2000);
 	}
 	
 	public void preencheDadosDeCadastro(String nome, String email, String senha) {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nome"))).sendKeys("nome");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("email");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("senha"))).sendKeys("senha");
-		//((WebElement) wait).findElement(By.id("senha")).sendKeys(senha);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nome"))).sendKeys(nome);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(email);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("senha"))).sendKeys(senha);
 	}
 	
 	public void clicarBotaoCriarConta() {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"btnEntrar\"]"))).click();
-		//((WebElement) wait).findElement(By.xpath("//*[@id=\"btnEntrarNovaConta\"]"));
+		clicarElemento(By.id("btnNovaConta"));
 	}
 	
 	public void validaUrlCadastro() {
-		assertTrue("URL não contém o cadastro", wait.until(ExpectedConditions.urlContains("cadastro")));
+		assertTrue("URL não contém o cadastro", wait.until(ExpectedConditions.urlContains("cadastrar")));
 	}
 }

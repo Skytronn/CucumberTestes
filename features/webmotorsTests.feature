@@ -17,3 +17,4 @@
 	Quando eu clico no botão ver ofertas
 	Entao eu sou direcionado a página de ofertas
 
+		

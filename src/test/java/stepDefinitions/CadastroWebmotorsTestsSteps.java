@@ -8,7 +8,7 @@ public class CadastroWebmotorsTestsSteps {
 CadastroWebmotorsPage cadastroWebmotors = new CadastroWebmotorsPage();
 	
 	@Dado("que eu navego até a página de Cadastro do webmotors")
-	public void navegarAteCadastro(){
+	public void navegarAteCadastro() throws InterruptedException{
 		cadastroWebmotors.acessaPaginaCadastro();
 	}
 	@Quando("eu preencho os meus dados")
