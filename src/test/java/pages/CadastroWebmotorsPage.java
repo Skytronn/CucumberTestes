@@ -38,7 +38,9 @@ public class CadastroWebmotorsPage extends CommonsBasePage {
 	}
 	
 	public void clicarBotaoCriarConta() {
-		clicarElemento(By.xpath("//*[@id=\"btnNovaConta\"]"));
+		clicarElemento(By.xpath("//*[@id=\"btnNovaConta\"]/strong"));
+		//*[@id="btnNovaConta"]/strong
+		//"//*[@id=\"btnNovaConta\"]"
 	}
 	
 	public void validaUrlCadastro() {
