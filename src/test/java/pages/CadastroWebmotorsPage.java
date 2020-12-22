@@ -2,6 +2,8 @@ package pages;
 
 import static org.junit.Assert.assertTrue;
 
+import javax.xml.xpath.XPath;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -36,7 +38,7 @@ public class CadastroWebmotorsPage extends CommonsBasePage {
 	}
 	
 	public void clicarBotaoCriarConta() {
-		clicarElemento(By.id("btnNovaConta"));
+		clicarElemento(By.xpath("//*[@id=\"btnNovaConta\"]"));
 	}
 	
 	public void validaUrlCadastro() {
