@@ -29,7 +29,7 @@ public class PesquisaWebmotorsPage extends CommonsBasePage {
 	}
 	
 	public void preencheProduto(String produto) {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"WhiteBox\"]/div[1]/div[2]/div/div/a"))).sendKeys(produto);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("SearchBar__input"))).sendKeys(produto);
 		
 	}
 	
@@ -37,8 +37,9 @@ public class PesquisaWebmotorsPage extends CommonsBasePage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"WhiteBox\"]/div[1]/div[2]/div/div/a"))).click();
 	}
 	
-	public void validaUrlPesquisa() {
-		assertTrue("URL não contém o pesquisa", wait.until(ExpectedConditions.urlContains("pesquisa")));
+	public void validaUrlPesquisa(String UrlPesquisa) {
+		assertTrue("URL tem pesquisa", wait.until(ExpectedConditions.urlContains(UrlPesquisa)));
+
 	}
 	
 }

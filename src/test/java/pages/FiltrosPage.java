@@ -19,8 +19,15 @@ public class FiltrosPage extends CommonsBasePage{
 		builder = new Actions(_Driver());
 	}
 	
+	public void esperarUmPouco(int tempo) throws InterruptedException {
+		Thread.sleep(tempo);
+	}
+	
 	public void acionarFiltros(String filtro_1, String filtro_2) {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(filtro_1)));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(filtro_2)));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(filtro_1)));		
+	
+		clicarElemento(By.xpath(filtro_1));
+		clicarElemento(By.xpath(filtro_2));
 	}
 }

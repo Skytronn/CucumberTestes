@@ -19,7 +19,7 @@ public class VerOfertasTestsSteps {
 	
 	@Entao("eu sou direcionado a página de ofertas")
 	public void verificarPagina() {
-		ofertaWebmotors.validaUrlPerfil("ofertas");
+		ofertaWebmotors.validaUrlOfertas("ofertas");
 		
 	}
 }

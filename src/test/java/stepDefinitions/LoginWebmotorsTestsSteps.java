@@ -21,7 +21,7 @@ LoginWebmotorsPage loginWebmotors = new LoginWebmotorsPage();
 	
 	@E("clico no botão entrar")
 	public void clicarEntrar() {
-		loginWebmotors.clicarElemento(By.id("btnEntrar"));
+		loginWebmotors.clicarElemento(By.xpath("/html/body/div[1]/div/main/section/div/div/form[1]/div[4]/input"));
 	}
 	
 	@Entao("eu estou logado")
