@@ -1,11 +1,6 @@
 # language: pt
 
-<<<<<<< Updated upstream
-	Funcionalidade: Verificar se o botão de ofertas funciona 
-	
-=======
-	Funcionalidade: Testar pagina de cadastro do Webmotors e verifica se vai para paragina home
->>>>>>> Stashed changes
+	Funcionalidade: Verificar se o botão de ofertas funciona
 			
 	@evidencia
 	Cenario: Validar botão ver ofertas

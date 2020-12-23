@@ -1,5 +1,9 @@
 package stepDefinitions;
 
+import java.util.Random;
+
+import org.openqa.selenium.By;
+
 import io.cucumber.java.pt.*;
 import pages.CadastroWebmotorsPage;
 
@@ -20,7 +24,20 @@ CadastroWebmotorsPage cadastroWebmotors = new CadastroWebmotorsPage();
 	
 	@Quando("eu preencho os meus dados de cadastro")
 	public void preenchoDados() {
-		cadastroWebmotors.preencheDadosDeCadastro("Teste Teste", "teste4352@gmail.com", "Teste12345.");
+		Random random = new Random();
+		int testeEmail = random.nextInt(45362);
+		cadastroWebmotors.preencheDadosDeCadastro("Teste Teste", "teste"+ testeEmail + "@gmail.com", "Teste12345.");
+	}
+	
+	@E("Clico para criar minha conta")
+	public void CriarMinhaConta() {
+		cadastroWebmotors.clicarElemento(By.id("btnEntrarNovaConta"));
+	}
+	
+	@E("Aceito os Termos")
+	public void AceitarTermos() {
+		cadastroWebmotors.clicarElemento(By.xpath("//*[@id=\"modal\"]/div/div[1]/div[2]/label[1]/div"));
+		cadastroWebmotors.clicarElemento(By.xpath("//*[@id=\"modal\"]/div/div[1]/div[3]/button[2]"));
 	}
 	
 	@Entao("eu estou cadastrado")

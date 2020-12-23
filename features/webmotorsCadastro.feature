@@ -1,6 +1,6 @@
 	# language: pt
 
-	Funcionalidade: Testar pagina de cadastro do Webmotors e verifica se vai para paragina home
+	Funcionalidade: Testar pagina de cadastro do Webmotors e verifica se vai para pagina home
 	
 		Um cliente deseja fazer cadastro no site
 		
@@ -10,5 +10,6 @@
 	Dado que eu navego até a página de Cadastro do webmotors
 	E clico no botão criar conta
 	Quando eu preencho os meus dados de cadastro
+	E Clico para criar minha conta
+	E Aceito os Termos
 	Entao eu estou cadastrado
-	

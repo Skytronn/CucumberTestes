@@ -35,8 +35,8 @@ public class VerOfertasPage extends CommonsBasePage{
 		
 	}
 	
-	public void validaUrlPerfil() {
-		assertTrue("URL não contém ofertas", wait.until(ExpectedConditions.urlContains("ofertas")));
+	public void validaUrlPerfil(String UrlPesquisa) {
+		assertTrue("URL contém ofertas", wait.until(ExpectedConditions.urlContains(UrlPesquisa)));
 	}
 
 }

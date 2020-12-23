@@ -34,6 +34,7 @@ public class Hooks extends DriverFactory {
 
     }
 
+    
     @After
     public void finalizaDriver() throws IOException{
         _Driver().quit();

@@ -25,19 +25,15 @@ public class LoginWebmotorsPage extends CommonsBasePage {
 	}
 	
 	public void acessaPaginaLogin() {
-		navegarAteSite("https://login.webmotors.com.br");
+		navegarAteSite("https://login.webmotors.com.br/?&r=https://www.webmotors.com.br/carros/estoque?tipoveiculo=carros&inst=header:webmotors::logar-ou-cadastrar");
 	}
 		
 	public void preencheDadosDeLogin(String email, String senha){
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(email);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("senha"))).sendKeys(senha);
 	}
-	
-	public void clicarBotaoEntrar() {		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"btnEntrar\"]"))).click();
-	}
-	
-	public void validaUrlPerfil() {
-		assertTrue("URL não contém garagem", wait.until(ExpectedConditions.urlContains("garagem")));
+
+	public void validaUrl() {
+		assertTrue("URL contém garagem", wait.until(ExpectedConditions.urlContains("https://www.webmotors.com.br/")));
 	}
 }

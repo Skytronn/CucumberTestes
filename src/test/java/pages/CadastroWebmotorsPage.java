@@ -39,11 +39,9 @@ public class CadastroWebmotorsPage extends CommonsBasePage {
 	
 	public void clicarBotaoCriarConta() {
 		clicarElemento(By.xpath("//*[@id=\"btnNovaConta\"]/strong"));
-		//*[@id="btnNovaConta"]/strong
-		//"//*[@id=\"btnNovaConta\"]"
 	}
 	
 	public void validaUrlCadastro() {
-		assertTrue("URL não contém o cadastro", wait.until(ExpectedConditions.urlContains("cadastrar")));
+		assertTrue("URL não contém o cadastro", wait.until(ExpectedConditions.urlContains("www.webmotors.com.br/")));
 	}
 }
